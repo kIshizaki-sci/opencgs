@@ -172,7 +172,7 @@ class Simulation:
         df = df[columns_list]
 
         data = {}
-        for column in df.iteritems():
+        for column in df.items():
             data.update({column[0]: float(column[1].iloc[-1])})
         with open(res_dir + "/probes.yml", "w") as f:
             yaml.dump(data, f)
@@ -1520,7 +1520,7 @@ class CoupledSim(Simulation):
         df = df[columns_list]
 
         data = {}
-        for column in df.iteritems():
+        for column in df.items():
             data.update({column[0]: float(column[1].iloc[-1])})
         if sim_dir == res_dir:
             output_name = "probes_result"
